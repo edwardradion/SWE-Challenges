@@ -1,3 +1,14 @@
+Notes on code:
+
+There is a lot of functionality I still need to work on and learn to do independently. Notably:
+  - using Firebase for its realtime database and hosting
+  - making it work
+  - making it work without using getElementById()
+  
+I will spend some time working independently and preparing myself to be caught up to speed. I'm learning a tremendous deal.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
