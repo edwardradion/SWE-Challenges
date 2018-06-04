@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 export default class Form extends React.Component {
   state = {
@@ -15,13 +17,6 @@ export default class Form extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    // name = getInputVal("name");
-    // company = getInputVal("company");
-    // details = getInputVal("details");
-
-    // saveMessage(name, company, details);
-
-    //VIDEO ENTRY
     this.props.onSubmit(this.state);
     this.setState({
       yourname: "",
@@ -35,20 +30,11 @@ export default class Form extends React.Component {
     return document.getElementById(id).value;
   }
 
-  //save to Firebase
-  // saveMessage(name, company, details) {
-  //   newMessageRef = messageRef.push();
-  //   newMessageRef.set({
-  //     name: name,
-  //     company: company,
-  //     details: details
-  //   });
-  // }
-
   render() {
     return (
       <form>
-        <input
+        <br />
+        <TextField
           name="yourname"
           id="yourname"
           placeholder="Name"
@@ -56,7 +42,8 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
-        <input
+        <br />
+        <TextField
           name="company"
           id="company"
           placeholder="Company"
@@ -64,7 +51,8 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
-        <input
+        <br />
+        <TextField
           name="details"
           id="details"
           placeholder="Contract Details"
@@ -72,7 +60,16 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
-        <button onClick={e => this.onSubmit(e)}>Submit</button>
+        <br />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={e => this.onSubmit(e)}
+        >
+          Submit
+        </Button>
+        <br />
+        <br />
       </form>
     );
   }

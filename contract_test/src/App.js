@@ -17,7 +17,7 @@ import Form from "./Form.js";
 
 class App extends Component {
   state = {
-    fields: {}
+    fields: "Contracts will appear here"
   };
 
   // messagesRef = firebase.database().ref('messages');
@@ -31,10 +31,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        Enter your contract information below
-        <Form onSubmit={fields => this.onSubmit(fields)} />
-        <div>{JSON.stringify(this.state.fields, null, 2)}</div>
+      <div className="Header">
+        <div className="App">
+          Enter contract information below
+          <Form onSubmit={fields => this.onSubmit(fields)} />
+          <div>{JSON.stringify(this.state.fields, null, 2)}</div>
+        </div>
       </div>
     );
   }
